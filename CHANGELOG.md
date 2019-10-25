@@ -1,3 +1,8 @@
+## 0.16.2
+
+* Fix `serializer` initialization
+* Added `xmlserializer`
+
 ## 0.16.0
 
 * Supports the `link` tag in GPX data.

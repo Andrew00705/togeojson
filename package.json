@@ -1,6 +1,6 @@
 {
   "name": "boldtrn-togeojson",
-  "version": "0.16.1",
+  "version": "0.16.2",
   "description": "convert KML and GPX to GeoJSON - forked from mapbox/togeojson",
   "main": "togeojson.js",
   "directories": {
@@ -28,7 +28,7 @@
     "url": "git://github.com/boldtrn/togeojson.git"
   },
   "browser": {
-    "xmldom": false
+    "xmlserializer": false
   },
   "browserify": {
     "transform": [
@@ -37,9 +37,10 @@
   },
   "license": "BSD-2-Clause",
   "dependencies": {
-    "xmldom": "~0.1.19",
     "concat-stream": "~1.5.1",
-    "minimist": "1.2.0"
+    "minimist": "1.2.0",
+    "xmldom": "~0.1.19",
+    "xmlserializer": "^0.6.1"
   },
   "keywords": [
     "kml",

@@ -87,7 +87,10 @@ var toGeoJSON = (function() {
         var isNodeEnv = (typeof process === 'object' && !process.browser);
         var isTitaniumEnv = (typeof Titanium === 'object');
         if (typeof exports === 'object' && (isNodeEnv || isTitaniumEnv)) {
-            serializer = new (require('xmldom').XMLSerializer)();
+            var xmldom = require('xmldom');
+            serializer =
+                xmldom.XMLSerializer ? new xmldom.XMLSerializer() :
+                require('xmlserializer');
         } else {
             throw new Error('Unable to initialize serializer');
         }

@@ -61,6 +61,15 @@ var tj = require('togeojson'),
 
 var kml = new DOMParser().parseFromString(fs.readFileSync('foo.kml', 'utf8'));
 
+// using togeojson in react-native
+
+var tj = require('togeojson'),
+    fs = require('fs'),
+    // react-native doesn't have xml parsing or a dom. use xmlserializer
+    xmlserializer = require('xmlserializer');
+
+var kml = xmlserializer.parseFromString(fs.readFileSync('foo.kml', 'utf8'));
+
 var converted = tj.kml(kml);
 
 var convertedWithStyles = tj.kml(kml, { styles: true });
