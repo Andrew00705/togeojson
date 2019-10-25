@@ -1,5 +1,5 @@
 {
-  "name": "boldtrn-togeojson",
+  "name": "expanded-boldtrn-togeojson",
   "version": "0.16.2",
   "description": "convert KML and GPX to GeoJSON - forked from mapbox/togeojson",
   "main": "togeojson.js",
@@ -57,5 +57,10 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/boldtrn/togeojson/issues"
+  },
+  "homepage": "https://github.com/boldtrn/togeojson#readme",
+  "author": ""
 }
